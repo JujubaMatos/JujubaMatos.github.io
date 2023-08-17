@@ -1,87 +1,67 @@
-html{
-    font-size: 20px;
-    font-family: 'Bricolage Grotesque', sans-serif;
-    background-color: gainsboro;
-    color: #fff;
+html, body {
+    height: 100%;
 }
 
-body{
-    width: 600px;
-    margin: auto ;
-    background-color: black;
-    padding: 0 20px 20px 20px;
-    border: 5px solid black;
+body {
+    color: white; /*cor das letras*/
+    background-color: black; /*cor do fundo*/
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto !important;
+} /*faz referencia a todo o projeto*/
+
+ul {
+    display: flex; /*diz que o posicionamento da lista será flexivel*/
+    justify-content: space-around; /*justifica*/
+    list-style-type: none; /*põe o estilo ponto inicial da lista como "none"*/
+    align-items: center; /*alinha os itens ao centro*/
+    padding: 16px; /*dá uma distancia de 16px*/
+    background-color: #74ccff;
+    margin-bottom: 20px;
+} /*faz referencia apenas as ul(aquela lista criada no HTML)*/
+
+a {
+    color:aliceblue;
+    text-decoration: none;
 }
 
-h1{
-    margin: 0;
-    font-size: 60px;
+body {
+    margin: 20px;
+}
+
+header img {
+    margin: 20px;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    border: 3px solid #74ccff
+}
+
+h1 {
+    color: #74ccff;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+footer a {
+    margin:20px;
+}
+
+
+.center {
     text-align: center;
-    color:blue;
-    text-shadow: -2px 2px  blueviolet;
 }
 
-img{
-    display: block; /*transformamos a imagem em um bloco assim podemos dar margem*/
-    margin: auto;
+.viewport{
+    display: flex;
+    
 }
-
-p,
-li {
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
-}
-
-a:hover {
-    color: blueviolet;
-}
-
-/*botão bonito*/    
-    .glow-on-hover {
-        width: 220px;
-        height: 50px;
-        border: none;
-        outline: none;
-        color: #fff;
-        background: #111;
-        cursor: pointer;
-        position: relative;
-        z-index: 0;
-        border-radius: 10px;
-    }
-    .glow-on-hover:before {
-        content: '';
-        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-        position: absolute;
-        top: -2px;
-        left:-2px;
-        background-size: 400%;
-        z-index: -1;
-        filter: blur(5px);
-        width: calc(100% + 4px);
-        height: calc(100% + 4px);
-        animation: glowing 20s linear infinite;
-        opacity: 0;
-        transition: opacity .3s ease-in-out;
-        border-radius: 10px;
-    }
-    .glow-on-hover:hover:before {
-        opacity: 1;
-    }
-    .glow-on-hover:after {
-        z-index: -1;
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #111;
-        left: 0;
-        top: 0;
-        border-radius: 10px;
-    }
-    @keyframes glowing {
-        0% { background-position: 0 0; }
-        50% { background-position: 400% 0; }
-        100% { background-position: 0 0; }
-    }
